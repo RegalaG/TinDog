@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Tindog</title>
+    <!-- font awesomecdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <!-- CSS only -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<style>
+    :root{
+        --primary-color: #ff4c69;
+        --secondary-color: #ffffff;
+        --text-primary:#000000;
+
+        --content-padding: 10% 0;
+         }
+    body {
+        background-color:var(--primary-color);
+    }
+    /* hero section */
+    .hero__title {
+        font-size: 56px;    
+        font-weight: 900;
+    }
+    .hero__img{
+        width: 25%;
+        transform: rotate(25deg);
+        position: absolute;
+        right: 20%;
+        top: 25%;
+    }
+    /* feature section */
+    .plain-color{
+        background-color: var(--secondary-color);
+        color: var(--text-primary)
+    }
+
+    /* media query for title page */
+    @media (max-width: 1028px){
+        body{
+            text-align: center;
+        }
+        .hero__img {
+            position: static;
+            transform: rotate(0);
+            width: 50%;
+            margin-top: 10%;
+        }
+    }
+    .colored-section,
+    .plain-section {
+        padding: var(--content-padding);
+    }
+    #feature{
+        position:relative;
+        z-index: 1;
+    }
+    /* Css Presets */
+    .padding-none{
+        padding: 0 !important;
+    }
+</style>
+<body>
+   <nav class="navbar navbar-expand-lg mt-3">
+  <div class="container">
+    <a class="navbar-brand" href="#">Tindog</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav justify-content-end flex-grow-1">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+       
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <!-- PRINCE TEMPERED -->
+
+
+    <!-- HERO SECTION -->
+<section id="hero" class="colored-section">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+                <div class="col-12 col-md-6">
+                    <h1 class="hero__title mb-5">Meet new and Interesting dog</h1>
+                    <button class="btn btn-dark btn-lg"><i class="fa-brands fa-apple"></i> Download</button>
+                    <button class="btn btn-lg btn-outline-dark"><i class="fa-brands fa-google-play"></i> Download</button>
+                </div>
+                <div class="col-12 col-md-6">
+                    <img class="img-fluid hero__img" src="iphone6.png" alt="Hero Image">
+                </div>
+            </div>
+        </div>
+</section>
+<section id="feature" class="plain-color">
+    <div class="container">
+        <div class="row">
+            <div class="feature-box col-lg-4"> <i class="fa-solid fa-circle-check fa-4x "></i>
+                <h3 class="feature-section__title"> Easy to use</h3>
+                <p>so easy to use, even your dog could do it.</p>
+            </div> 
+               
+            <div class="feature-box col-lg-4"> <i class="fa-solid fa-bullseye fa-4x "></i> 
+                <h3 class="feature-section__title"> Easy to use</h3>
+                <p>so easy to use, even your dog could do it.</p>
+            </div>
+               
+            <div class="feature-box col-lg-4"> <i class="fa-solid fa-heart fa-4x "></i>
+                <h3 class="feature-section__title"> Easy to use</h3>
+                <p>so easy to use, even your dog could do it.</p>
+            </div>
+                
+        </div>
+    </div>
+</section>
+<!-- CAROUSEL SECTION -->
+<section id="carousel" class="colored-section">
+    <div id="testimononial-carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active text-center">
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                <img class="testimonial__image rounded-circle w-20" src="lady-img.jpg" alt="First slide">
+                <em>-Maria Clara</em>
+            </div>
+            <div class="carousel-item text-center">
+                <h2> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam assumenda dicta, itaque quasi vero ipsam explicabo sint ducimus error omnis deleniti! Similique iste vitae natus consequuntur, pariatur ea libero hic!
+                </h2>
+                <img class="testimonial__image rounded-circle w-20" src="dog-img.jpg" alt="Second slide">
+                <em>-John Doe</em>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#testimonial-carousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </a>
+        <a class="carousel-control-next" href="#testimonial-carousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </a>
+    </div>
+</section>
+<!-- Press Section -->
+<section id="press" class="colored-section text-center mb-3">
+    <img src="TechCrunch.png" alt="TC" class="press__logo p-2">
+    <img src="tnw.png" alt="TNW" class="press__logo p-2">
+    <img src="bizinsider.png" alt="BI" class="press__logo p-2">
+    <img src="mashable.png" alt="MSH" class="press__logo p-2">
+</section>
+
+<!-- Pricing Section -->
+<section id="pricing" class="plain-section text-center">
+    <h2 class="pricing__title">A Plan for Every Dog's Need</h2>
+    <p class="pricing__text">Simple and affordable price plans for your and your dog</p>
+    
+<!-- Price Cards -->
+
+<!-- Free Card -->
+<div class="row">
+    <div class="pricing__column col-lg-4 col-md-6">
+        <div class="card">
+            <div class="card-header">
+            <h5>Chihuahua</h5>
+            </div>
+                <div class="card-body">
+            <h2 class="pricing__card-text">FREE</h2>
+            <p>5 Matches Per Day.</p>
+            <p>10 Messages Per Day.</p>
+            <p>Unlimited App Usage.</p>
+            <button type="button" class="btn btn-lg btn-block btn-outline-dark">Sign Up</button>
+                </div>
+        </div>
+    </div> 
+
+    <!-- Regular Card -->
+<div class="pricing__column col-lg-4 col-md-6">
+    <div class="card">
+        <div class="card-header">
+            <h5>Labrador</h5>
+        </div>
+            <div class="card-body">
+        <h2 class="pricing__card-text">$49 / mo</h2>
+        <p>Unlimited Matches</p>
+        <p>Unlimited Messages</p>
+        <p>Unlimited App Usage</p>
+        <button type="button" class="btn btn-lg btn-block btn-outline-dark">Sign Up</button>
+            </div>
+    </div>
+</div> 
+
+<!-- Premium Card -->
+<div class="pricing__column col-lg-4 col-md-6">
+    <div class="card">
+        <div class="card-header">
+        <h5>Mastiff</h5>
+        </div>
+            <div class="card-body">
+        <h2 class="pricing__card-text">$99 / mo</h2>
+        <p>Priority Listing</p>
+        <p>Unlimited Matches</p>
+        <p>Unlimited Messages</p>
+        <p>Unlimited App Usage</p>
+        <button type="button" class="btn btn-lg btn-block btn-outline-dark">Sign Up</button>
+            </div>
+    </div>
+</div> 
+</div>
+</section>
+<section id="cta" class="color-section">
+        <div class=" ">
+            <div class="col-12 text-center">
+                <h1 class="hero__title ">Find the True Love of Your Dog's Life Today</h1>
+                <button class="btn btn-dark btn-lg mt-5"><i class="fa-brands fa-apple"></i> Download</button>
+                <button class="btn btn-lg btn-outline-dark mt-5"><i class="fa-brands fa-google-play"></i> Download</button>
+            </div>
+            <div class="col-12 ">
+            </div>
+        </div>
+</section>
+<!-- Footer -->
+<section id="footer" class="plain-color">
+        
+            <div class="Footer__icon mt-5 text-center"> 
+                <a href="twitter.com" target="_blank"><i class="fa-brands fa-twitter pb-3 pr-3 pt-5"></i></a>
+                <a href="facebook.com"target="_blank"><i class="fa-brands fa-facebook pb-3 pr-3"></i></a>
+                <a href="instagram.com"target="_blank"></a><i class="fa-brands fa-instagram pb-3 pr-3"></i>
+               <a href="gmail.com"target="_blank"><i class="fa-solid fa-envelope pb-5 pr-3 "></i></a>
+                <p>© Copyright 2022 Tindog | Gerald Regala, Web Developer</p>
+            </div> 
+               
+            <!-- <div class="feature-box col-lg-4"> <i class="fa-brands fa-twitter"></i>
+            </div> 
+            <div class="feature-box col-lg-4"> <i class="fa-solid fa-heart fa-4x "></i>
+            </div> -->
+                
+</section>
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+   integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+   integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+   integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+</script>
+</html>-
